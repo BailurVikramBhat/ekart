@@ -1,0 +1,63 @@
+<footer class="bg-gray-900 text-light pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <!-- Logo & Social Links -->
+      <div class="col-lg-4 mb-4">
+        <a class="navbar-brand d-flex align-items-center mb-3" href="#">
+          <img [src]="logoPath" alt="Logo" width="40" height="40" class="me-2">
+          <span class="gradient-text fs-4">{{ brandName }}</span>
+        </a>
+        <p class="text-gray-300">Premium products with sustainable values.</p>
+        <div class="social-icons">
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-4 mb-4">
+        <h5 class="text-teal mb-3">Shop</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none hover-teal">New Arrivals</a></li>
+          <li><a href="#" class="text-white text-decoration-none hover-teal">Best Sellers</a></li>
+          <li><a href="#" class="text-white text-decoration-none hover-teal">Sale</a></li>
+          <li><a href="#" class="text-white text-decoration-none hover-teal">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <!-- Help & Policies -->
+      <div class="col-lg-2 col-md-4 mb-4">
+        <h5 class="text-teal mb-3">Help</h5>
+        <ul class="list-unstyled">
+          <li><a href="/order-tracker" class="text-white text-decoration-none hover-teal">Order Tracker</a></li>
+          <li><a href="/returns" class="text-white text-decoration-none hover-teal">Exchanges & Returns</a></li>
+          <li><a href="#" class="text-white text-decoration-none hover-teal">Shipping Info</a></li>
+          <li><a href="#" class="text-white text-decoration-none hover-teal">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-lg-4 col-md-4 mb-4">
+        <h5 class="text-teal mb-3">Stay Updated</h5>
+        <p class="text-gray-300">Subscribe for exclusive offers.</p>
+        <div class="input-group mb-1">
+          <input type="email" class="form-control text-teal-400 border-0" placeholder="Your email">
+          <button class="btn btn-teal text-white" type="button">Subscribe</button>
+        </div>
+        <small class="text-gray-300 fs-8">We respect your privacy. Unsubscribe anytime.</small>
+      </div>
+    </div>
+
+    <hr class="my-4 bg-secondary">
+
+    <!-- Copyright & Payment Icons -->
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0">&copy; {{ currentYear() }} {{ brandName }}. All rights reserved.</p>
+      </div>
+
+    </div>
+  </div>
+</footer>

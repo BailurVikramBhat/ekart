@@ -1,0 +1,47 @@
+.bg-gray-900 { background-color: #212529; }
+.text-gray-300 { color: #d1d5db; }  // 8.59:1 on bg-gray-900
+.text-gray-400 { color: #9ca3af; }  // 5.74:1
+.text-teal-400 { color: #2dd4bf; }  // 5.12:1
+.bg-teal-600 { background-color: #0d9488; } // 4.54:1 on white
+// Footer Styles
+footer {
+  .text-teal {
+    color: #20c997;
+  }
+
+  .hover-teal {
+    transition: color 0.2s;
+    &:hover {
+      color: #20c997 !important;
+    }
+  }
+
+  .btn-teal {
+    background-color: #20c997;
+    border-color: #20c997;
+    &:hover {
+      background-color: darken(#20c997, 10%);
+    }
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+    &:hover {
+      color: #20c997 !important;
+      transform: translateY(-3px);
+    }
+  }
+
+  // Gradient text (reuse from navbar)
+  .gradient-text {
+    background: linear-gradient(45deg, #20c997, #17a2b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+.fs-8 {
+  font-size: small;
+}

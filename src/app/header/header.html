@@ -1,0 +1,158 @@
+<!-- Sale Banner -->
+@if (saleEligible) {
+  <div class="sale-banner alert alert-dismissible fade show text-center mb-0"
+       role="alert">
+    <strong>🎉 Sale Is Live!</strong>
+    <span class="ms-2">Up to <strong>30% off</strong> sitewide.</span>
+    <a href="/sale"
+       class="alert-link ms-2">Shop Now →</a>
+    <button type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"></button>
+  </div>
+}
+
+
+<!-- Navbar -->
+<div class="border-bottom border-primary">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <!-- Brand with CSS Animations -->
+      <a class="navbar-brand magnificent-brand" href="#">
+        <img [src]="logoPath" alt="logo" class="logo-pulse" />
+        <span class="gradient-text">{{ brandName }}</span>
+      </a>
+
+      <!-- Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links & Controls -->
+      <div class="collapse navbar-collapse"
+           id="navbarNav">
+        <!-- Left-side nav links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active"
+               aria-current="page"
+               href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               href="#">Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item"
+                     href="#">Help</a></li>
+              <li><a class="dropdown-item"
+                     href="#">Exchange & Return</a></li>
+              <li><a class="dropdown-item"
+                     href="#">Order Tracker</a></li>
+              <li><a class="dropdown-item"
+                     href="#">Store Locator</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link"
+                                  href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link"
+                                  href="#">Contact</a></li>
+        </ul>
+
+        <!-- Search form -->
+        <form class="d-flex me-3"
+              role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success"
+                  type="submit">
+            Search
+          </button>
+        </form>
+
+        <!-- User avatar dropdown -->
+        <ul class="navbar-nav">
+          <!-- Avatar dropdown (shown md and up) -->
+          <li class="nav-item dropdown d-none d-md-block">
+            <a
+              class="nav-link dropdown-toggle p-0"
+              href="#"
+              id="userDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                [src]="avatarPath('suresh')"
+                alt="User Avatar"
+                width="40"
+                height="40"
+                class="rounded-circle border border-primary"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="userDropdown"
+            >
+              <li><a class="dropdown-item"
+                     href="/settings">⚙️ Settings</a></li>
+              <li><a class="dropdown-item"
+                     href="/help">❔ Help</a></li>
+              <li>
+                <hr class="dropdown-divider"/>
+              </li>
+              <li><a class="dropdown-item text-danger"
+                     href="/logout">❗ Logout</a></li>
+            </ul>
+          </li>
+
+          <!-- Button group (shown xs & sm only) -->
+          <li class="nav-item d-flex mt-2 justify-content-center align-items-center d-md-none">
+            <div class="btn-group">
+            <a class="btn btn-outline-primary  me-2"
+               href="/settings"
+               title="Settings">
+              ⚙️ Settings
+            </a>
+            <a class="btn btn-outline-secondary  me-2"
+               href="/help"
+               title="Help">
+              ❔ Help
+            </a>
+            <a class="btn  btn-danger"
+               href="/logout"
+               title="Logout">
+              🚪 Logout
+            </a>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</div>
+

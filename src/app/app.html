@@ -1,1 +1,7 @@
-<h1>App will be here shortly!</h1>
+<app-header [brandName]="brandName"/>
+<main class="m-4 flex-grow-1">
+  <router-outlet></router-outlet>
+  <app-cart/>
+</main>
+<app-footer logoPath="/logo.png"
+            [brandName]="brandName"/>

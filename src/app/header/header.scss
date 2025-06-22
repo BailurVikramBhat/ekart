@@ -1,0 +1,111 @@
+/* custom.scss – make sure this loads after Bootstrap */
+.sale-banner {
+  @extend .d-flex !optional;
+  @extend .justify-content-center !optional;
+  @extend .align-items-center !optional;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #20c997;  /* your teal primary */
+  color: #fff;
+  font-family: 'Lexend', sans-serif;
+  z-index: 1050;               /* above navbar */
+  padding: .5rem 1rem;
+
+  .alert-link {
+    color: rgba(255,255,255,.9);
+    text-decoration: underline;
+  }
+  .btn-close {
+    margin: 0 !important;
+    padding: 0 !important;
+    filter: invert(1);         /* make the “X” white */
+    position: absolute;
+    right: 0.75rem;
+    top: 0.75rem;
+  }
+}
+
+/* push page content down so it isn’t hidden */
+body {
+  padding-top: 3rem;  /* adjust if your banner is taller/shorter */
+}
+
+/* slightly smaller text on phones */
+@media (max-width: 576px) {
+  .sale-banner { font-size: .9rem; }
+}
+// Magnificent Brand Component (Responsive)
+.navbar-brand {
+  &.magnificent-brand {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    // Default font size (desktop)
+    font-size: 1.25rem; // 20px
+
+    // Logo image with pulse animation
+    .logo-pulse {
+      margin-right: 0.5rem;
+      width: 36px;
+      height: 36px;
+      //animation: pulse 2s infinite ease-in-out;
+
+      // Reduce logo size on mobile
+      @media (max-width: 768px) {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    // Gradient text effect
+    .gradient-text {
+      background: linear-gradient(45deg, #20c997, #17a2b8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: inline-block;
+    }
+
+    // Animated underline
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #20c997, #17a2b8);
+      transition: width 0.3s;
+      margin-top: 2px;
+    }
+
+    // Mobile responsiveness
+    @media (max-width: 768px) {
+      font-size: 1rem; // 16px
+
+      &:hover {
+        transform: none; // Disable scale on mobile if desired
+      }
+
+      .gradient-text {
+        letter-spacing: 0.3px; // Tighter spacing on mobile
+      }
+    }
+
+    // Extra small devices
+    @media (max-width: 576px) {
+      font-size: 0.875rem; // 14px
+    }
+  }
+}
+
+// Keyframes for pulse animation
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

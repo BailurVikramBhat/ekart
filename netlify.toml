@@ -1,0 +1,8 @@
+[build]
+  command = "npm ci && ng build --configuation production"
+  publish = "dist/ekart/browser"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
