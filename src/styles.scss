@@ -1,0 +1,20 @@
+$font-family-sans-serif: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-monospace: 'Courier New', monospace;
+// Custom variables (Teal & Sage)
+$primary: #20c997;
+$secondary: #6c757d;
+$dark: #343a40;          // Dark Gray
+$light: #f8f9fa;         // Light Gray
+
+// Optional: Override more variables (e.g., borders, fonts)
+$border-radius: 0.25rem;
+
+
+// Import Bootstrap *after* overriding
+@import "bootstrap/scss/bootstrap";
+.active {
+  border-bottom: 2px solid $primary !important;
+}
+.hover-border:hover {
+  border: 3px solid $primary;
+}

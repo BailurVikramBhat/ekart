@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <div class="error-template py-5">
+        <h1>
+          <i class="bi bi-exclamation-triangle-fill text-warning"></i> Oops!</h1>
+        <h2>404 Not Found</h2>
+        <div class="error-details my-3">
+          Sorry, the page you requested could not be found.
+        </div>
+        <div class="error-actions mt-4">
+          <a routerLink="/" class="btn btn-primary btn-lg me-3">
+            <i class="bi bi-house-door-fill"></i> Take Me Home
+          </a>
+          <button class="btn btn-outline-secondary btn-lg" (click)="goBack()">
+            <i class="bi bi-arrow-left"></i> Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

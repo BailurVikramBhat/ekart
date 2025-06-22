@@ -1,0 +1,15 @@
+@if (isLoading()) {
+  <div class="text-center my-5">
+    <div class="spinner-border text-primary"
+         role="status"></div>
+  </div>
+}
+@if (error) {
+  <div class="alert alert-warning">
+    <div class="alert-heading">Fetching product details</div>
+    <div>{{error}}</div>
+  </div>
+}
+<div class="container">
+<h1>{{product?.title}}</h1>
+</div>

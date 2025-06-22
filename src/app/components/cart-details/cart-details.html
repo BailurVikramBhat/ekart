@@ -1,0 +1,67 @@
+<div class="container">
+  @if (isLoading) {
+    <div class="text-center my-5">
+      <div class="spinner-border text-primary"
+           role="status"></div>
+    </div>
+  }
+  @if (cartProducts.length) {
+
+    <p class="fs-3">You have {{ cartProducts.length }} products in your cart. Checkout now! 🛒</p>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">View</th>
+          <th scope="col">Quantity</th>
+
+        </tr>
+        </thead>
+        <tbody>
+          @for (item of cartProducts; let idx = $index; track item.id) {
+            <tr>
+              <td>{{ idx + 1 }}</td>
+              <td>{{ item.id }}</td>
+              <td>{{ item.title }}</td>
+              <td>
+                <a [routerLink]="['/products', item.slug]">view details</a>
+              </td>
+              <td>
+
+                <i class="bi bi-dash-circle hover-pointer"
+                   (click)="deleteProductQuantity(item.id)"></i>
+                <span class="mx-2">{{ cartIds.get(item.id) }}</span>
+
+                <i class="bi bi-plus-circle hover-pointer"
+                   (click)="addProductQuantity(item.id)"></i>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex w-full justify-content-end">
+      <button class="btn btn-primary flex-grow-1 flex-md-grow-0"
+              data-bs-toggle="modal"
+              data-bs-target="#placeOrderModal"
+      >Place Order
+      </button>
+    </div>
+
+
+    <app-modal modalId="placeOrderModal"
+               title="Place Order?"
+               body="You will be navigated to payments page for payment. Please finish your payment within 5 minutes."
+               ctaName="Place"/>
+
+
+  } @else {
+
+    <div class="alert alert-danger">{{ error }}</div>
+
+  }
+
+</div>

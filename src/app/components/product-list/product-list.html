@@ -1,0 +1,22 @@
+
+@if (errorMessage) {
+  <div class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+}
+<div class="container">
+  <p class="text-teal-400 fs-3">Catalog</p>
+  @if (isLoading()) {
+    <div class="text-center my-5">
+      <div class="spinner-border text-primary"
+           role="status"></div>
+    </div>
+  }
+  <div class="row">
+  @for (product of products; track product.id) {
+    <a class="col-12 col-md-4 mb-4" [routerLink]="['/products', product.slug]">
+    <app-product [product]="product"/>
+    </a>
+  }
+  </div>
+</div>
